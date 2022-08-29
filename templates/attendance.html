@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">
+  {{ current_user.firstName }}'s attendance for {{ day }}
+</h1>
+<h2 class="subtitle">
+  General Attendance: {% if current_user.attendance == 1 %} Submitted {% else %} Not Submitted {% endif %}
+</h2>
+<h2 class="subtitle">
+  Attendance for History({{ current_user.historyPeriod }}): {% if current_user.historyAttendance == 1 %} Submitted {% else %} Not Submitted {% endif %}
+</h2>
+<h2 class= "subtitle">
+  Attendance for English({{ current_user.englishPeriod }}):{% if current_user.englishAttendance == 1 %} Submitted {% else %} Not Submitted {% endif %}
+</h2>
+<h2 class = "subtitle">
+  Attendance for Physics({{ current_user.physicsPeriod }}):{% if current_user.physicsAttendance == 1 %} Submitted {% else %} Not Submitted {% endif %}
+</h2>
+<h2 class = "subtitle">
+  Attendance for TOK({{ current_user.TOKPeriod }}):{% if current_user.TOKAttendance == 1 %} Submitted {% else %} Not Submitted {% endif %}
+</h2>
+<p>Want to change class periods? Click the classes tab and reenter your classes.</p>
+{% endblock %}

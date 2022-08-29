@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<h1 class="title">
+  Welcome, {{ current_user.firstName }}!
+</h1>
+<h2 class="subtitle">
+  Start by entering your classes.
+</h2>
+{% else %}
+<h1 class="title">
+  Autofill
+</h1>
+<h2 class="subtitle">
+  Automatically enter your school attendance.
+</h2>
+{% endif %}
+{% endblock %}
